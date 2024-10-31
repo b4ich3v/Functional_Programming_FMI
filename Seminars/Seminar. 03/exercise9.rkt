@@ -1,0 +1,6 @@
+(define (all-prefixes l)
+  (define (prefix-helper l acc)
+    (if (null? l)
+        (reverse (cons acc '()))  
+        (prefix-helper (cdr l) (cons (car l) acc))))
+  (prefix-helper l '()))  
