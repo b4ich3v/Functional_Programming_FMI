@@ -1,0 +1,5 @@
+(define (ack n a b)
+  (cond ((= n 0) (succ b))
+        ((= n 1) (add a b))
+        ((= n 2) (multiply a b))
+        ((> n 2) (ack (- n 1) a (ack n (- a 1) b)))))
