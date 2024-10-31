@@ -1,0 +1,8 @@
+(define (unique l)
+  (define (unique-helper l prev acc)
+    (if (null? l)
+        (reverse acc)
+        (if (equal? (car l) prev)
+            (unique-helper (cdr l) prev acc)
+            (unique-helper (cdr l) (car l) (cons (car l) acc)))))
+  (unique-helper l '() '()))  
