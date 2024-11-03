@@ -1,0 +1,20 @@
+(define (get-cell mat i j)
+  (if (or (< i 0) (< j 0) (>= i (length mat)) (>= j (length (car mat))))
+      0
+      (mat-at mat i j)))
+
+(define (extract-3x3 mat i j)
+  (map (lambda (di)
+         (map (lambda (dj)
+                (get-cell mat (+ i di) (+ j dj)))
+              '(-1 0 1)))
+       '(-1 0 1)))
+
+(define (apply-kernel kernel mat)
+  (let ((rows (length mat))
+        (cols (length (car mat))))
+    (map (lambda (i)
+           (map (lambda (j)
+                  (kernel (extract-3x3 mat i j)))
+                (range 0 cols)))
+         (range 0 rows))))
