@@ -1,0 +1,6 @@
+(define (accepts-word? automaton word)
+  (let* ((delta (car automaton))
+         (start-state (cadr automaton))
+         (accept-states (caddr automaton))
+         (final-state (apply-delta* delta start-state word)))
+    (member final-state accept-states)))
