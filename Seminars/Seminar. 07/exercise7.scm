@@ -1,0 +1,8 @@
+(define (path g x y)
+  (define (dfs current path)
+    (cond ((equal? current y) (reverse path))
+          ((member current path) #f)
+          (else (or-map (lambda (neighbor)
+                          (dfs neighbor (cons current path)))
+                        (cdr (assoc current g))))))
+  (dfs x '()))
