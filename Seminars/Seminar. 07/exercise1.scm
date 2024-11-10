@@ -1,0 +1,8 @@
+(define (graph? g)
+  (and (list? g)
+       (every? (lambda (kv)
+                 (let ((v (car kv))
+                       (neighbors (cdr kv)))
+                   (and (list? neighbors)
+                        (every? (lambda (n) (assoc n g)) neighbors))))
+               g)))
