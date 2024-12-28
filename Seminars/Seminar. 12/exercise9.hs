@@ -1,0 +1,33 @@
+babaTree :: BinTree String
+babaTree = Node "" a b
+  where
+    a = Node "a" aa ab
+    b = Node "b" ba bb
+    aa = Node "aa" aaa aab
+    ab = Node "ab" aba abb
+    ba = Node "ba" baa bab
+    bb = Node "bb" bba bbb
+    aaa = Node "aaa" aaaa aaab
+    aab = Node "aab" aaba aabb
+    aba = Node "aba" abaa abab
+    abb = Node "abb" abba abbb
+    baa = Node "baa" baaa baab
+    bab = Node "bab" baba babb
+    bba = Node "bba" bbaa bbab
+    bbb = Node "bbb" bbba bbbb
+    aaaa = Node "aaaa" undefined undefined
+    aaab = Node "aaab" undefined undefined
+    aaba = Node "aaba" undefined undefined
+    aabb = Node "aabb" undefined undefined
+    abaa = Node "abaa" undefined undefined
+    abab = Node "abab" undefined undefined
+    abba = Node "abba" undefined undefined
+    abbb = Node "abbb" undefined undefined
+    baaa = Node "baaa" undefined undefined
+    baab = Node "baab" undefined undefined
+    baba = Node "baba" undefined undefined
+    babb = Node "babb" undefined undefined
+    bbaa = Node "bbaa" undefined undefined
+    bbab = Node "bbab" undefined undefined
+    bbba = Node "bbba" undefined undefined
+    bbbb = Node "bbbb" undefined undefined
