@@ -17,3 +17,8 @@
 8. Напишете функция trimBinTree :: Integer -> (BinTree a) -> (BinTree a), която отрязва дърво до дадена дълбочина
 
 9. Дефинирайте константата babaTree :: BinTree String, представяща такова безкрайно дърво: безкрайно двоично дърво:
+<br><br>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <img src="tree.svg" alt="Image 1" width="1000"/>
+</div>
+<br><br>
